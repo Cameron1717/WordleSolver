@@ -17,3 +17,8 @@ fn read_lines(file_path: impl AsRef<Path>) -> io::Result<Vec<String>> {
     let file = File::open(file_path)?;
     io::BufReader::new(file).lines().collect()
 }
+struct Letter {
+    char: String,
+    allowed: Vec<u32>,
+    disallowe: Vec<u32>,
+}
